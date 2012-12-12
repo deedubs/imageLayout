@@ -3,7 +3,12 @@ body {
 }
 
 .viewport {
-  background: red;
+  background: #eee;
   height: 200px;
   margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.viewport img {
+  width: 100%;
 }

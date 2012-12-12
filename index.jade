@@ -5,14 +5,12 @@ html(ng-app="image")
     link(href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css", rel="stylesheet")
     link(href="/css/app.css", rel="stylesheet")
   body
-    .imageContainer.span12
-      .row
-        .viewport.span6
-        .viewport.span6
-      .row
-        .viewport.span4
-        .viewport.span4
-        .viewport.span4
+
+    .imageContainer(ng-controller='image').span12
+      button(ng-click="changeLayout()") Change Layout
+      .row(ng-repeat="row in layout")
+        div(viewport, ng-index="{{$index}}", ng-repeat="viewport in row", ng-class="'span' + (12 / row.length)").viewport
+          img(draggable="true", ng-src="{{imageSrc}}")
 
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
     script(src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js")
