@@ -1,0 +1,9 @@
+body {
+  margin-top: 25px;
+}
+
+.viewport {
+  background: red;
+  height: 200px;
+  margin-bottom: 25px;
+}
